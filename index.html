@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>YouTube Deep Link Generator</title>
+
+  <meta
+    name="description"
+    content="Generate YouTube deep links for videos, livestreams, Shorts and channels."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="youtube-icon">
+        ▶
+      </div>
+
+      <h1>
+        YouTube Deep Link
+      </h1>
+
+      <p>
+        Convert YouTube videos, livestreams, Shorts and
+        channels into links that open directly in YouTube.
+      </p>
+
+    </section>
+
+
+    <section class="card">
+
+      <label for="youtubeUrl">
+        YouTube URL
+      </label>
+
+
+      <div class="input-wrapper">
+
+        <input
+          id="youtubeUrl"
+          type="url"
+          placeholder="Paste YouTube URL here..."
+          autocomplete="off"
+          spellcheck="false"
+        >
+
+        <button
+          id="clearBtn"
+          class="clear-btn"
+          type="button"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <button
+        id="generateBtn"
+        class="generate-btn"
+        type="button"
+      >
+        Generate Deep Link
+      </button>
+
+
+      <div
+        id="error"
+        class="error"
+      ></div>
+
+
+      <div
+        id="result"
+        class="result hidden"
+      >
+
+        <div class="result-title">
+          Detected Type
+        </div>
+
+        <div
+          id="detectedType"
+          class="detected-type"
+        ></div>
+
+
+        <div class="result-title">
+          Your Deep Link
+        </div>
+
+
+        <div class="result-box">
+
+          <input
+            id="deepLink"
+            type="text"
+            readonly
+          >
+
+          <button
+            id="copyBtn"
+            type="button"
+          >
+            Copy
+          </button>
+
+        </div>
+
+
+        <button
+          id="openBtn"
+          class="open-btn"
+          type="button"
+        >
+          Open Link
+        </button>
+
+
+        <div
+          id="copyMessage"
+          class="copy-message"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <section class="supported">
+
+      <h2>
+        Supported YouTube Links
+      </h2>
+
+
+      <div class="examples">
+
+        <div>
+          <span>🎬 VIDEO</span>
+          youtube.com/watch?v=...
+        </div>
+
+        <div>
+          <span>🔴 LIVE</span>
+          youtube.com/live/...
+        </div>
+
+        <div>
+          <span>📱 SHORTS</span>
+          youtube.com/shorts/...
+        </div>
+
+        <div>
+          <span>👤 CHANNEL</span>
+          youtube.com/@YourChannel
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      YouTube Deep Link Generator
+    </footer>
+
+  </main>
+
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
